@@ -11,13 +11,13 @@ function App() {
   return (
     <>
        <BrowserRouter>
-       <Routes>
-        <Route path='/' element={<Home/>}/> 
-         <Route path='/about' element={<About />}/> 
-       </Routes>
+        <Routes>
+         <Route path='/' element={<Home/>}/> 
+          <Route path='/about' element={<React.Suspense fallback='Loadin'><About/></React.Suspense>} /> 
+        </Routes>
        </BrowserRouter>
     </>
   )
 }
 
-export default App
+export default App ;
